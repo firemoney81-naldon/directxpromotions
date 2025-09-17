@@ -1,0 +1,222 @@
+
+<!DOCTYPE html><html lang="ko"><head>
+  <meta charSet="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta property="og:title" content="G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="/"/>
+  <meta property="og:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
+  <meta name="description" content="제네시스 G80 보험료 블로그 형식 가이드 — 예상 계산기, 보험사 비교표, 절약팁, FAQ, 공신력 외부자료까지 한 페이지에 정리했습니다.">
+  
+  <meta itemprop="description" content="G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁" />
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁"/>
+  <meta name="twitter:url" content="/"/>
+  <meta name="twitter:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
+  <meta name="twitter:description" content="G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁"/>
+  
+  <meta name="robots" content="index,nofollow" />
+  <meta name="NaverBot" content="index,nofollow" />
+  <meta name="Yeti" content="index,nofollow" />
+  <meta name="googlebot" content="index,nofollow" />
+  
+  <meta name="subject" content="G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁" />
+  <meta name="publisher" content="G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁" />
+  <meta name="Other Agent" content="G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁" />
+  <meta name="location" content="South Korea" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  <meta itemprop="name" content="" />
+  
+    <link rel="stylesheet" href="./Img/reset.css">
+    <link rel="stylesheet" href="./Img/main.css">
+    <link rel="stylesheet" href="./common/swiper.css" />
+    <script src="./jquery.min.js"></script>
+    <script src="./jquery.serializeObject.min.js"></script>
+    <script src="./json3.min.js"></script>
+    <script src="./bxslider.js" type="text/javascript"></script>
+    <script src="./common/moment.min.js"></script>
+  
+  
+  <title>G80보험료 추천 가이드 — 계산기 & 비교표 & 절약팁</title>
+  
+  <meta name="next-head-count" content="25"/>
+  <meta name="format-detection" content="telephone=no"/>
+  
+  
+  
+  
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+      background: #FAFAFA;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg,#7FB3D5,#A3D9C8);
+      padding: 36px 20px;
+      color: #fff;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 24px;
+      background: #fff;
+    }
+    h2 {
+      margin-top: 32px;
+      font-size: 1.4rem;
+      border-left: 6px solid #7FB3D5;
+      padding-left: 8px;
+      background: #F2F8FC;
+    }
+    h3 {
+      margin-top: 24px;
+      font-size: 1.15rem;
+      color: #1C4E80;
+    }
+    .calc-box, .form-box, .link-box {
+      background: #F9FCFF;
+      border: 1px solid #E3ECF5;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 20px 0;
+    }
+    label { font-weight: 600; display: block; margin-top: 10px; }
+    input, select, textarea {
+      width: 100%; padding: 8px; margin-top: 4px;
+      border-radius: 8px; border: 1px solid #ccc;
+    }
+    button {
+      background: #377AB8; color: #fff;
+      border: none; border-radius: 10px;
+      padding: 10px 16px; margin-top: 12px;
+      cursor: pointer; font-weight: 600;
+    }
+    table {
+      width: 100%; border-collapse: collapse; margin: 14px 0;
+    }
+    th, td {
+      border: 1px solid #E0E0E0; padding: 10px; text-align: left;
+    }
+    th { background: #F0F8FA; }
+    footer {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 16px;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>G80보험료 블로그 가이드</h1>
+    <p>계산기 · 보험사 비교표 · 절약팁 · FAQ를 한눈에!</p>
+  </header>
+
+  <main>
+    <article>
+      <h2>1. G80 보험료 계산기 (체험형)</h2>
+      <p>아래 입력란을 채워 넣으면 <strong>예상 보험료</strong>를 바로 확인할 수 있습니다.</p>
+      <div class="calc-box">
+        <form id="calcForm" onsubmit="event.preventDefault(); calculate();">
+          <label>나이</label>
+          <input type="number" id="age" value="35">
+          <label>운전경력(년)</label>
+          <input type="number" id="driveYears" value="10">
+          <label>차종</label>
+          <select id="model">
+            <option value="2.5">G80 2.5T</option>
+            <option value="3.5">G80 3.5T</option>
+            <option value="ev">G80 전동화</option>
+          </select>
+          <label>연간주행거리(km)</label>
+          <input type="number" id="mileage" value="12000">
+          <button type="submit">예상 보험료 계산</button>
+        </form>
+        <p><strong>결과:</strong> <span id="estPrice">—</span></p>
+      </div>
+
+      <h2>2. 보험사별 비교표</h2>
+      <p>보험사별 사례값(예시)을 표로 정리했습니다. 조건에 따라 차이는 큽니다.</p>
+      <table>
+        <tr><th>보험사</th><th>예시 보험료(연)</th></tr>
+        <tr><td>삼성화재 다이렉트</td><td>약 314,300원</td></tr>
+        <tr><td>KB손해보험</td><td>약 366,860원</td></tr>
+        <tr><td>DB손해보험</td><td>약 373,100원</td></tr>
+      </table>
+
+      <h2>3. 보험료 절약팁</h2>
+      <ul>
+        <li>주행거리 특약 신청으로 주행이 적으면 할인</li>
+        <li>블랙박스/안전장치 등록 할인</li>
+        <li>다이렉트 채널 이용으로 중간 수수료 절감</li>
+        <li>무사고 경력, 가족한정 특약 확인</li>
+      </ul>
+
+      <h2>4. FAQ</h2>
+      <h3>Q. G80 보험료 평균은 얼마인가요?</h3>
+      <p>A. 30~40대 기준으로 약 30만~65만 원 범위 사례가 많습니다.</p>
+      <h3>Q. 전기 G80은 보험료가 비싼가요?</h3>
+      <p>A. 전기차는 부품단가, 수리비 영향으로 달라질 수 있습니다.</p>
+
+      <h2>5. 견적 문의 남기기</h2>
+      <div class="form-box">
+        <form id="leadForm" onsubmit="event.preventDefault(); alert('문의가 접수되었습니다.');">
+          <label>이름</label><input type="text" required>
+          <label>연락처</label><input type="text">
+          <label>문의내용</label><textarea rows="3"></textarea>
+          <button type="submit">문의 보내기</button>
+        </form>
+      </div>
+
+      <h2>6. 공신력 자료 & 외부링크</h2>
+      <div class="link-box">
+        <ul>
+          <li><a href="https://www.genesis.com/kr/ko/models/luxury-sedan-genesis/g80/highlights.html" target="_blank">제네시스 공식 G80 제원</a></li>
+          <li><a href="https://www.fsc.go.kr/no010101/72213" target="_blank">금융감독원 보험 안내</a></li>
+          <li><a href="https://carinfo.knia.or.kr/Intro.page" target="_blank">손해보험협회 자동차보험포털</a></li>
+          <li><a href="https://bigin.kidi.or.kr/user/nd00044.action" target="_blank">보험개발원 차량기준가액</a></li>
+          <li><a href="https://www.youtube.com/watch?v=RynyS4QXPAk" target="_blank">G80 가솔린 vs 전기차 보험료 비교 영상</a></li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>※ 본 블로그의 보험료 값은 사례를 바탕으로 한 예시이며, 실제 보험료는 개인 조건에 따라 다릅니다.</p>
+  </footer>
+
+  <script>
+    function calculate(){
+      const age = Number(document.getElementById('age').value);
+      const driveYears = Number(document.getElementById('driveYears').value);
+      const model = document.getElementById('model').value;
+      const mileage = Number(document.getElementById('mileage').value);
+
+      let base = model==="3.5"?480000:(model==="ev"?380000:350000);
+      let ageFactor = (age<25)?1.6:(age<30)?1.25:(age<40)?1.0:1.1;
+      let careerFactor = 1 - Math.min(0.1, driveYears*0.01);
+      let mileageFactor = 1 + Math.max(0, (mileage-10000)/50000);
+
+      let result = Math.round(base*ageFactor*careerFactor*mileageFactor);
+      document.getElementById('estPrice').innerText = result.toLocaleString()+"원/년 (예시)";
+    }
+  </script>
+</body>
+</html>
