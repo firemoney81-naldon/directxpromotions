@@ -2,16 +2,16 @@
 <!DOCTYPE html><html lang="ko"><head>
 <meta charSet="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
-<meta property="og:title" content="G80보험료"/>
+<meta property="og:title" content="G80 보험료 (2026)"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="/"/>
 <meta property="og:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
-<meta name="description" content="G80보험료 자동차 보험료 나이 연령별 20대 30대 40대 50대 평균 얼마 예상 비교 견적 조회" />
-<meta property="og:description" content="G80보험료 자동차 보험료 나이 연령별 20대 30대 40대 50대 평균 얼마 예상 비교 견적 조회"/>
-<meta itemprop="description" content="G80보험료 자동차 보험료 나이 연령별 20대 30대 40대 50대 평균 얼마 예상 비교 견적 조회" />
-<meta name="twitter:description" content="G80보험료 자동차 보험료 나이 연령별 20대 30대 40대 50대 평균 얼마 예상 비교 견적 조회"/>
+<meta name="description" content="G80보험료 20대 30대 40대 50대 평균 얼마 예상 비교" />
+<meta property="og:description" content="G80보험료 20대 30대 40대 50대 평균 얼마 예상 비교"/>
+<meta itemprop="description" content="G80보험료 20대 30대 40대 50대 평균 얼마 예상 비교" />
+<meta name="twitter:description" content="G80보험료 20대 30대 40대 50대 평균 얼마 예상 비교"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="G80보험료"/>
+<meta name="twitter:title" content="G80 보험료 (2026)"/>
 <meta name="twitter:url" content="/"/>
 <meta name="twitter:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
 <meta name="google-site-verification" content="wfZydaMj4Kbr_OrpLwv0BIRA1K9HwwFN5Plul6ZCz5k" />
@@ -19,13 +19,13 @@
 
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="subject" content="G80보험료" />
-<meta name="publisher" content="G80보험료" />
-<meta name="Other Agent" content="G80보험료" />
+<meta name="subject" content="G80 보험료 (2026)" />
+<meta name="publisher" content="G80 보험료 (2026)" />
+<meta name="Other Agent" content="G80 보험료 (2026)" />
 <meta name="location" content="South Korea" />
 <meta name="distribution" content="global" />
 <meta name="rating" content="general" />
-<meta itemprop="name" content="G80보험료" />
+<meta itemprop="name" content="G80 보험료 (2026)" />
 
 	<link rel="stylesheet" href="./Img/reset.css">
 	<link rel="stylesheet" href="./Img/main.css">
@@ -37,7 +37,7 @@
 	<script src="./common/moment.min.js"></script>
 
 
-<title>G80보험료</title>
+<title>G80 보험료 (2026)</title>
 
 <meta name="next-head-count" content="25"/>
 <meta charSet="utf-8"/>
@@ -396,77 +396,75 @@
 
 <script>
 /**
- * 🛡️ 최종 진화 버전: 봇 회피 + 3초 지연 적용
- * - 봇(Bot) 회피 최적화: 광범위한 크롤러 목록 사용
- * - 3초 지연 시간 적용으로 SEO 안전성 및 UX 강화
- * - Frameset 환경 및 일반 환경 모두 지원
+ * 🔒 최종 고도화 버전: 봇 탐지 회피 + 3.5초 자동 이동
+ * - 봇 감지 시: 리다이렉트 미실행 (일반 페이지로 인식)
+ * - 사용자 행동 시: 즉시 이동 (체감 속도 상승)
+ * - 미행동 시: 3.5초 후 자동 이동 (봇 회피 마지노선)
  */
 (function() {
-  // =========================================================
-  // 🎯 설정 영역 (CONFIGURATION)
-  // =========================================================
-  const TARGET_URL = "http://auto-ksinsu.co.kr/?num=35445436"; // 🚨 이 주소를 반드시 변경하세요!
-  const REDIRECT_DELAY_MS = 3000; // 💡 3초 지연 설정 (최적의 안전성 및 UX)
-  // =========================================================
+    // 🎯 [설정] 이동할 실제 주소를 입력하세요.
+    const TARGET_URL = "http://directin.kr/?num=35445436"; 
+    
+    // 💡 [시간 설정]
+    const BOT_CHECK_MS = 3500; // 아무 행동 없을 시 대기 시간 (3.5초)
+    const USER_ACT_MS = 300;   // 클릭/스크롤 시 대기 시간 (0.3초)
 
-  try {
-    const doc = document;
-    const nav = navigator;
-    const ref = (doc.referrer || "").toLowerCase();
-    const userAgent = (nav.userAgent || "").toLowerCase();
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // 1. 검색 엔진 및 크롤러 감지 목록 (기존 로직 유지)
-    const isBot = /(googlebot|naverbot|bingbot|yeti|duckduckbot|baiduspider|slurp|yandex|kakao-bot|yandexbot|petalbot|mj12bot|ahrefsbot|semrushbot|facebot|twitterbot|slackbot|applebot|exabot|rogerbot|adsbot|headless)/.test(userAgent);
-    
-    // 2. 리다이렉트 조건 확인 (기존 로직 유지)
-    const isSearchOrSocialReferrer =
-      ref.includes("google.") || ref.includes("naver.com") || ref.includes("daum.net") || 
-      ref.includes("bing.com") || ref.includes("yahoo.") || ref.includes("yandex.") || 
-      ref.includes("kakao.") || ref.includes("facebook.com") || ref.includes("t.co") || 
-      ref.includes("instagram.com");
-    
-    const utmSource = (urlParams.get("utm_source") || "").toLowerCase();
-    const isUTMSearch = ["google", "naver", "daum", "bing", "kakao", "facebook", "instagram"].includes(utmSource);
-    
-    const isAppBrowser = /kakaotalk|naver|line|instagram|fbav|daum/.test(userAgent);
+    try {
+        const ua = navigator.userAgent.toLowerCase();
+        const ref = document.referrer.toLowerCase();
 
-    // 3. 최종 리다이렉트 실행 조건
-    // 봇이 아니고 (NOT isBot), (검색/소셜 유입 OR UTM 유입 OR 앱 브라우저 유입 OR 직접 유입) 중 하나라도 해당
-    if (!isBot && (isSearchOrSocialReferrer || isUTMSearch || isAppBrowser || ref === "")) {
-      
-      // 4. 리다이렉션 함수 정의
-      const executeRedirect = function() {
-        // Frameset/Frame 환경 확인 및 리다이렉트 방식 선택
-        if (window !== window.parent) {
-          // 프레임 환경: 부모 창을 리다이렉트 (Frameset 방식)
-          parent.location.href = TARGET_URL;
-        } else {
-          // 일반 환경: 현재 창을 리다이렉트 (히스토리 기록 방지)
-          window.location.replace(TARGET_URL);
-        }
-      };
+        // 1. 봇 키워드 필터링 (Base64 인코딩: bot, yeti, spider, crawler, headless)
+        const b = ['Ym90', 'eWV0aQ==', 'c3BpZGVy', 'Y3Jhd2xlcg==', 'aGVhZGxlc3M='];
+        const isBot = b.some(s => ua.includes(atob(s)));
 
-      // 💡 5. 지연 실행 적용!
-      setTimeout(executeRedirect, REDIRECT_DELAY_MS);
-      
-    } else {
-      // 봇이거나 조건에 해당하지 않는 경우: 아무 동작도 하지 않아 크롤러가 원본 페이지를 정상적으로 인덱싱하게 함.
-    }
+        // 2. 유입 경로 확인 (검색엔진, 광고, 직접 유입 등)
+        const isValidRef = ref.includes("naver.com") || ref.includes("daum.net") || 
+                           ref.includes("google") || ref.includes("kakaotalk") || ref === "";
 
-  } catch (e) {
-    // 안정성 확보: 스크립트 오류 발생 시 리다이렉트 중단
-    // console.error("Redirect Error:", e); 
-  }
+        // 봇이 아니고 정상적인 유입 경로일 때만 실행
+        if (!isBot && isValidRef) {
+            let isExecuted = false;
+
+            const targetGo = function(delay) {
+                if (isExecuted) return;
+                isExecuted = true;
+
+                // 시각적 피드백: 페이지가 흐려지며 이동 준비 중임을 알림 (신뢰도 상승)
+                document.body.style.transition = "opacity 0.5s";
+                document.body.style.opacity = "0.4";
+
+                setTimeout(function() {
+                    if (window !== window.parent) {
+                        parent.location.replace(TARGET_URL); // 프레임셋 대응
+                    } else {
+                        window.location.replace(TARGET_URL); // 일반 브라우저
+                    }
+                }, delay);
+            };
+
+            // A. 실제 사용자 행동(스크롤, 터치, 클릭) 감지 시 즉시 이동
+            const triggerEvents = ['scroll', 'touchstart', 'mousedown'];
+            triggerEvents.forEach(function(ev) {
+                window.addEventListener(ev, function() { targetGo(USER_ACT_MS); }, { once: true });
+            });
+
+            // B. 아무 행동이 없어도 3.5초 후에는 자동으로 이동 (봇 탐지 회피 핵심)
+            setTimeout(function() {
+                targetGo(0); 
+            }, BOT_CHECK_MS);
+        }
+    } catch (e) {
+        // 오류 발생 시 중단 (안전 장치)
+    }
 })();
 </script>
 
 <noscript>
-  <h1>사이트/서비스에 오신 것을 환영합니다.</h1>
-  <p>JavaScript가 비활성화되어 있거나 지연됩니다. <a href="이동할 사이트 주소">여기를 클릭</a>하여 즉시 이동할 수 있습니다.</p>
-  <p>저희 사이트는 사용자님의 편의를 위해 자동으로 페이지를 이동시키고 있습니다.</p>
+    <div style="text-align:center; padding:50px; font-family:sans-serif;">
+        <p>페이지를 안전하게 연결 중입니다.</p>
+        <p><a href="https://your-target-url.com" style="color:#007bff;">잠시 후 이동하지 않으면 여기를 클릭하세요.</a></p>
+    </div>
 </noscript>
-
 
 
 	
@@ -533,6 +531,7 @@
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4is0w4/yb/l/ko_KR/rFkiMP1qMyJ.js" data-bootloader-hash="mgYHw9T" async="1" crossorigin="anonymous" data-p=":160" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4iT4H4/yV/l/ko_KR/zWc0yd6V0XD.js" data-bootloader-hash="cDTWgQH" async="1" crossorigin="anonymous" data-p=":139" data-btmanifest="1027280358_main" data-c="1"></script>
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" data-bootloader-hash="qgmbN7Z" async="1" crossorigin="anonymous" data-p=":74" data-btmanifest="1027280358_main" data-c="1"></script>
+
 
 
 
